@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+	array = Array.from(Array(100).keys());
+
   constructor() {}
+
+  async refresh(event) {
+	  	setTimeout(() => {
+			event.detail.complete();
+		}, 2000);
+    }
 
 }
