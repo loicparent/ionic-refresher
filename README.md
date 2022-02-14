@@ -1,6 +1,6 @@
 # ionic-refresher
 
-This demo show how the scroll is affected when I use an ion-refresher element in a page.
+This demo shows how the scroll is affected when I use an ion-refresher element in a page.
 
 <table border="0">
  <tr>
