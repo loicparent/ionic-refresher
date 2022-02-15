@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Demo 1 : Fixed
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Code with bug after this comment -->
+
+<ion-content>
+	<ion-refresher slot="fixed" pullMin="30" pullMax="100" (ionRefresh)="refresh($event)">
+		<ion-refresher-content></ion-refresher-content>
+	</ion-refresher>
+
+	<div class="fixed"></div>
+
+	<p>The fix is avaible in the code (tab1.page.html)</p>
+	<div *ngFor="let e of array; let i = index;" [innerText]="i+1"></div>
+</ion-content>
+
+<!-- Correction after this comment -->
+
+<ion-content *ngIf="false">
+	<div slot="fixed" class="content-inner">
+		<ion-refresher pullMin="30" pullMax="100" (ionRefresh)="refresh($event)">
+			<ion-refresher-content></ion-refresher-content>
+		</ion-refresher>
+
+		<div class="fixed"></div>
+	</div>
+
+	<div *ngFor="let e of array; let i = index;" [innerText]="i+1"></div>
+</ion-content>

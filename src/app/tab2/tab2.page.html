@@ -1,0 +1,30 @@
+<ion-header class="header" [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Demo 2 : Tabs
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Code with bug after this comment -->
+
+<ion-content [scrollEvents]="true" (ionScroll)="scrollEvent($event)">
+	<ion-refresher slot="fixed" pullMin="30" pullMax="100" (ionRefresh)="refresh($event)">
+		<ion-refresher-content></ion-refresher-content>
+	</ion-refresher>
+
+	<div *ngFor="let e of array_short; let i = index;" [innerText]="i+1"></div>
+
+	<div class="tabs">
+		<div class="tabs__menu">
+			<div class="tabs__menu__inner">
+				This element stay fixed at the top
+			</div>
+		</div>
+		<div class="tabs__content" *ngFor="let e of array_short; let i = index;" [innerText]="i+1"></div>
+	</div>
+
+	<div class="tabs__content" *ngFor="let e of array_long; let i = index;" [innerText]="i+1"></div>
+</ion-content>
+
+<!-- Correction after this comment -->
